@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Exercise6 {
 
-    public static void readArray(int Arr2D[][]) {
+    public static void readArray(int arr2D[][]) {
 
         Scanner scanner = new Scanner(System.in);
 
@@ -13,12 +13,12 @@ public class Exercise6 {
 
                 System.out.println("Enter Number: ");
 
-                Arr2D[i][j] = scanner.nextInt();
+                arr2D[i][j] = scanner.nextInt();
             }
         }
     }
 
-    public static void arrColsSum(int Arr2D[][]) {
+    public static void arrColsSum(int arr2D[][]) {
 
         for (int i = 0; i < 4; i++) {
 
@@ -26,22 +26,22 @@ public class Exercise6 {
 
             for (int j = 0; j < 3; j++) {
 
-                colSum += Arr2D[j][i];
+                colSum += arr2D[j][i];
 
             }
 
-            Arr2D[3][i] = colSum;
+            arr2D[3][i] = colSum;
         }
 
     }
 
-    public static void diplayArray(int Arr2D[][]) {
+    public static void displayArray(int arr2D[][]) {
 
         for (int i = 0; i < 4; i++) {
 
             for (int j = 0; j < 4; j++) {
 
-                System.out.print(Arr2D[i][j] + " ");
+                System.out.print(arr2D[i][j] + " ");
 
             }
 
@@ -50,12 +50,12 @@ public class Exercise6 {
     }
 
     public static void main(String[] args) {
-        int Arr2D[][] = new int[4][4];
+        int arr2D[][] = new int[4][4];
 
-        readArray(Arr2D);
+        readArray(arr2D);
 
-        arrColsSum(Arr2D);
+        arrColsSum(arr2D);
 
-        diplayArray(Arr2D);
+        displayArray(arr2D);
     }
 }
