@@ -4,41 +4,41 @@ import java.util.Scanner;
 
 public class Exercise7 {
 
-    public static char readChar(String Message) {
+    public static char readChar(String message) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print(Message);
+        System.out.print(message);
         char ch = scanner.next().charAt(0);
         return ch;
     }
 
-    public static String readString(String Message) {
+    public static String readString(String message) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print(Message);
+        System.out.print(message);
         String s = scanner.nextLine();
         return s;
     }
 
-    public static int countChar(String Word, char Letter) {
+    public static int countChar(String word, char letter) {
 
-        int Counter = 0;
+        int counter = 0;
 
-        for (int i = 0; i < Word.length(); i++) {
+        for (int i = 0; i < word.length(); i++) {
 
-            if (Word.charAt(i) == Letter) {
-                Counter++;
+            if (word.charAt(i) == letter) {
+                counter++;
             }
         }
 
-        return Counter;
+        return counter;
     }
 
     public static void main(String[] args) {
 
-        char Letter = readChar("Enter Letter to Find: ");
-        String Word = readString("Enter Word: ");
-        int Counter = countChar(Word, Letter);
+        char letter = readChar("Enter Letter to Find: ");
+        String word = readString("Enter Word: ");
+        int counter = countChar(word, letter);
 
-        System.out.print("Letter " + Letter + " repeats in " + Word + " {" + Counter + "} times");
+        System.out.print("Letter " + letter + " repeats in " + word + " {" + counter + "} times");
 
     }
 }
