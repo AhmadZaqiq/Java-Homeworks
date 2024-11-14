@@ -5,53 +5,53 @@ import java.util.Scanner;
 
 public class Exercise5 {
 
-    public static void fillRandomMarks(int MarksArr[]) {
+    public static void fillRandomMarks(int marksArr[]) {
 
         Random random = new Random();
 
-        for (int i = 0; i < MarksArr.length; i++) {
-            MarksArr[i] = 60 + random.nextInt(41);
+        for (int i = 0; i < marksArr.length; i++) {
+            marksArr[i] = 60 + random.nextInt(41);
         }
     }
 
-    public static void printRandomMarks(int MarksArr[]) {
+    public static void printRandomMarks(int marksArr[]) {
 
         System.out.print("Marks: ");
 
-        for (int i = 0; i < MarksArr.length; i++) {
+        for (int i = 0; i < marksArr.length; i++) {
 
-            System.out.print(MarksArr[i] + " ");
+            System.out.print(marksArr[i] + " ");
         }
 
         System.out.print("\n");
     }
 
-    public static float calculateSum(int MarksArr[]) {
+    public static float calculateSum(int marksArr[]) {
 
-        float Sum = 0;
+        float sum = 0;
 
-        for (int i = 0; i < MarksArr.length; i++) {
+        for (int i = 0; i < marksArr.length; i++) {
 
-            Sum += MarksArr[i];
+            sum += marksArr[i];
         }
 
-        return Sum;
+        return sum;
     }
 
-    public static float calculateAverage(int MarksArr[]) {
+    public static float calculateAverage(int marksArr[]) {
 
-        return (calculateSum(MarksArr) / MarksArr.length);
+        return (calculateSum(marksArr) / marksArr.length);
     }
 
     public static void main(String[] args) {
 
-        int[] MarksArr = new int[10];
+        int[] marksArr = new int[10];
 
-        fillRandomMarks(MarksArr);
+        fillRandomMarks(marksArr);
 
-        printRandomMarks(MarksArr);
+        printRandomMarks(marksArr);
 
-        System.out.print("Avg: {" + calculateAverage(MarksArr) + "}");
+        System.out.print("Avg: {" + calculateAverage(marksArr) + "}");
 
     }
 }
